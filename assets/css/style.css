@@ -1,0 +1,1155 @@
+:root{--navy:#25355f;--navy-deep:#182849;--navy-soft:#31436f;--ink:#202a31;--muted:#627076;--paper:#f5f6f5;--paper-deep:#eef1f1;--mist:#e7eeee;--line:#d4dddc;--teal:#4b9e99;--teal-dark:#327b76;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{text-decoration:none;color:inherit}.container{width:min(1440px,calc(100% - 96px));margin:auto}
+.site-header{height:78px;display:flex;align-items:center;background:rgba(245,246,245,.94);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;gap:30px}.brand{display:flex;align-items:center;gap:10px;line-height:1}.brand-mark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:11px;font-weight:700}.brand strong{font-size:13px;letter-spacing:.1em}.brand small{display:block;font-size:8px;letter-spacing:.22em;margin-top:5px}.desktop-nav{display:flex;gap:24px;margin-left:auto;font-size:13px;color:#4d595c}.desktop-nav a{transition:.2s}.desktop-nav a:hover{color:var(--teal-dark)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:14px 20px;border-radius:3px;font-size:13px;font-weight:700;transition:.2s}.nav-cta{background:var(--navy);color:#fff}.nav-cta:hover,.btn-dark:hover{background:var(--navy-deep)}.menu-btn,.mobile-menu{display:none}
+/* HERO */.hero{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:92px 0 0;min-height:760px}.hero:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(231,238,238,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(231,238,238,.035) 1px,transparent 1px);background-size:96px 96px}.hero:after{content:'';position:absolute;width:700px;height:700px;border:1px solid rgba(220,228,232,.13);border-radius:50%;right:-170px;top:-410px;box-shadow:0 0 0 95px rgba(220,228,232,.025),0 0 0 190px rgba(220,228,232,.018)}.hero-pattern{position:absolute;pointer-events:none}.pattern-rings{width:430px;height:430px;border:1px solid rgba(220,228,232,.12);border-radius:50%;left:-220px;bottom:-250px;box-shadow:0 0 0 62px rgba(220,228,232,.018)}.pattern-lines{width:440px;height:170px;right:9%;bottom:180px;border:1px solid rgba(220,228,232,.09);transform:rotate(-8deg);background:repeating-linear-gradient(135deg,transparent 0 31px,rgba(220,228,232,.055) 32px 33px)}.pattern-dots{width:220px;height:220px;right:31%;top:175px;background-image:radial-gradient(rgba(220,228,232,.17) 1px,transparent 1.3px);background-size:16px 16px;mask-image:linear-gradient(135deg,#000,transparent 78%)}.hero-layout{display:grid;grid-template-columns:1.2fr .65fr;gap:90px;align-items:center;min-height:600px;position:relative;z-index:1}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.23em;margin:0 0 24px}.eyebrow.light{color:#9ac7c2}.eyebrow.dark{color:#438b85}.hero h1{font:600 clamp(68px,7.4vw,112px)/.93 'Playfair Display',serif;letter-spacing:-.06em;margin:0;max-width:960px}.hero h1 em,h2 em{font-weight:500}.hero-text{font-size:18px;line-height:1.68;color:#d4dbe3;max-width:650px;margin:30px 0 34px}.hero-actions{display:flex;align-items:center;gap:28px}.btn-white{background:#fff;color:var(--navy)}.btn-white:hover{background:#eaf0f0}.hero-link{font-size:14px;font-weight:700;color:#d9e1e8}.hero-card{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.045);padding:34px;backdrop-filter:blur(8px);box-shadow:0 22px 55px rgba(10,19,41,.12)}.mini-label{font-size:10px;letter-spacing:.18em;color:#a6c9c6;margin:0 0 24px}.approach-item{display:flex;gap:18px;padding:16px 0;border-top:1px solid rgba(255,255,255,.11);font-size:15px}.approach-item b{font-size:11px;color:#9fc7c3}.hero-card-note{font:500 20px/1.45 'Playfair Display',serif;color:#e7ebef;margin-top:26px}.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.15)}.hero-strip div{padding:25px 28px 29px 0;border-right:1px solid rgba(255,255,255,.12);margin-right:28px}.hero-strip div:last-child{border:0}.hero-strip strong,.hero-strip span{display:block}.hero-strip strong{font-size:15px;margin-bottom:6px}.hero-strip span{font-size:12px;color:#bbc7d1}
+/* GLOBAL SYSTEM */.section{padding:120px 0;position:relative;overflow:hidden}.section:before{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(54,75,79,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(54,75,79,.022) 1px,transparent 1px);background-size:96px 96px;opacity:.45}h2{font:600 clamp(46px,5.2vw,76px)/1.02 'Playfair Display',serif;letter-spacing:-.045em;margin:0}h3{font-size:21px;margin:0 0 12px;letter-spacing:-.015em}p{line-height:1.65}.section-top,.split-intro,.partners-heading,.contact-top{display:grid;grid-template-columns:1.05fr .75fr;gap:100px;align-items:start;position:relative;z-index:1}.section-top>p,.lead-copy,.partners-heading>p,.contact-top>p{font-size:18px;line-height:1.7;color:var(--muted);padding-top:52px;margin:0}.section-pattern{position:absolute;width:420px;height:420px;border:1px solid rgba(58,88,91,.12);border-radius:50%;left:-230px;bottom:-230px;box-shadow:0 0 0 50px rgba(58,88,91,.025),0 0 0 100px rgba(58,88,91,.018)}
+/* PRACTICE */.practice{background:var(--paper)}.practice-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:70px;position:relative;z-index:1;border-top:1px solid var(--line);border-left:1px solid var(--line)}.practice-cards article{border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.34);padding:38px;min-height:250px}.practice-cards span{display:block;color:var(--teal-dark);font-size:11px;margin-bottom:64px}.practice-cards p{color:var(--muted);font-size:15px}.text-link{font-size:14px;font-weight:700;color:var(--teal-dark);display:inline-block;margin-top:18px}
+/* STATUTORY */.statutory{background:var(--mist)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:60px;position:relative;z-index:1;border-left:1px solid var(--line);border-top:1px solid var(--line)}.service-grid article{padding:32px 38px;min-height:250px;background:rgba(255,255,255,.24);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.service-grid span{display:block;font-size:11px;color:#5c7775;margin-bottom:60px}.service-grid p{font-size:15px;color:var(--muted);max-width:310px}
+/* CONSULTING */.consulting{background:var(--paper)}.consulting:after{content:'';position:absolute;width:620px;height:620px;border-radius:50%;right:-380px;top:120px;border:1px solid rgba(58,88,91,.12);box-shadow:0 0 0 55px rgba(58,88,91,.025)}.consulting-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:110px;position:relative;z-index:1}.consulting-intro{position:sticky;top:110px;height:max-content}.consulting-intro>p:not(.eyebrow){font-size:17px;color:var(--muted);max-width:500px}.btn-dark{background:var(--navy);color:#fff;margin-top:16px}.consulting-list{border-top:1px solid var(--line)}.consulting-list article{display:grid;grid-template-columns:56px 1fr;gap:22px;padding:28px 0;border-bottom:1px solid var(--line)}.consulting-list b{font-size:11px;color:#56716f;padding-top:5px}.consulting-list h3{font-size:22px}.consulting-list p{font-size:15px;color:var(--muted);margin:0;max-width:760px}
+/* INDUSTRIES */.industries{background:var(--mist)}.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px;position:relative;z-index:1}.industry-card{height:330px;position:relative;background-size:cover;background-position:center;overflow:hidden;border:1px solid rgba(35,53,95,.09)}.industry-card:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,29,43,.05),rgba(17,28,42,.80))}.industry-card>div{position:absolute;inset:auto 0 0;padding:30px;color:#fff;z-index:1}.industry-card span{font-size:10px;letter-spacing:.14em;color:#a7d0ca}.industry-card h3{font:600 28px/1.05 'Playfair Display',serif;margin:9px 0 0}.pharma{background-image:url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80')}.manufacturing{background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80')}.agriculture{background-image:url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80')}.construction{background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80')}.energy{background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80')}.consumer{background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80')}
+/* CLIENTS */.clients{background:var(--paper)}.clients h2{margin-bottom:22px;position:relative;z-index:1}.clients .eyebrow,.clients-lead{position:relative;z-index:1}.clients-lead{font-size:18px;color:var(--muted);max-width:700px}.mncs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:65px;align-items:center;position:relative;z-index:1;border-top:1px solid var(--line);border-left:1px solid var(--line)}.client-logo{height:118px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:clamp(18px,2vw,30px);letter-spacing:-.05em;color:#304264;background:rgba(255,255,255,.35)}.client-logo:first-child{font-family:'Playfair Display';color:#235f69}.client-logo:nth-child(2){letter-spacing:.08em}.client-logo:nth-child(3){letter-spacing:.12em}.client-logo:nth-child(4){font-size:16px;letter-spacing:.05em}.client-names{text-align:center;color:#485567;font-size:18px;padding:30px 0 70px;position:relative;z-index:1}.client-names i{display:inline-block;height:20px;border-left:1px solid #88929d;margin:0 16px -5px}.client-lower{display:grid;grid-template-columns:1.4fr .65fr;gap:80px;padding-top:50px;border-top:1px solid var(--line);position:relative;z-index:1}.client-lower h3{font-size:23px}.client-lower ul{padding-left:20px;color:var(--muted);line-height:1.8}.client-lower aside{background:#dcebea;padding:30px 34px;display:flex;gap:20px;align-items:flex-start;border:1px solid rgba(50,123,118,.14)}.client-lower aside p{font-size:17px;margin:0}.note-icon{font-size:22px;color:var(--teal-dark)}
+/* PARTNERS */.partners{background:var(--mist)}.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:60px;position:relative;z-index:1}.partner-card{display:grid;grid-template-columns:39% 61%;background:rgba(255,255,255,.54);border:1px solid var(--line);overflow:hidden}.partner-card img{width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center top;filter:saturate(.9)}.partner-card>div{padding:44px 38px}.partner-role{font-size:11px;letter-spacing:.14em;color:#347d77;font-weight:700}.partner-card h3{font-size:27px;color:#314162}.credentials{font-size:13px;color:#65717a;font-weight:600}.partner-card>div>p:last-child{font-size:15px;color:#5b676e}.associates{padding-top:55px;position:relative;z-index:1}.associates>div{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.associates article{border-top:1px solid #bdccca;padding:20px 0}.associates strong,.associates span{display:block}.associates strong{font-size:17px;margin-bottom:8px}.associates span{font-size:13px;color:var(--muted)}
+/* CONTACT + FOOTER */.contact{background:var(--navy);color:#fff;padding-bottom:100px}.contact:before{background-image:linear-gradient(rgba(230,234,236,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(230,234,236,.035) 1px,transparent 1px);opacity:1}.contact-pattern{position:absolute;inset:0}.contact:after{content:'';position:absolute;width:650px;height:650px;border:1px solid rgba(230,234,236,.13);border-radius:50%;right:-270px;bottom:-400px;box-shadow:0 0 0 80px rgba(230,234,236,.018)}.contact-top,.contact-layout{position:relative;z-index:1}.contact-top>p{color:#d1d8e0}.contact-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:110px;margin-top:60px}.contact-card{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.12);padding:38px}.whatsapp{display:inline-flex;padding:14px 22px;border-radius:999px;background:linear-gradient(90deg,#3d9c92,#328f9b);font-weight:700;font-size:14px;margin-bottom:28px}.contact-card>div:not(:first-child){padding:24px 0;border-top:1px solid rgba(255,255,255,.12)}.contact-card small{color:#98c5bf;font-size:10px;font-weight:700;letter-spacing:.16em}.contact-card p{margin:8px 0 0;color:#d8dfe6}.contact-quote{align-self:center}.contact-quote blockquote{font:500 clamp(42px,4.5vw,66px)/1.1 'Playfair Display',serif;letter-spacing:-.04em;margin:0;max-width:760px}.contact-quote>span{display:block;width:55px;height:3px;background:#4eaaa2;margin:32px 0}.btn-teal{background:linear-gradient(90deg,#45a49b,#3296a1);color:#fff;border-radius:999px;padding:18px 28px}footer{background:var(--navy-deep);color:#cbd5df;padding:58px 0 20px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:80px}.footer-brand .brand-mark{background:#fff;color:var(--navy)}.footer-grid h4{font-size:10px;letter-spacing:.16em;color:#8fb2b8;margin:6px 0 18px}.footer-grid a:not(.brand){display:block;margin:10px 0;font-size:14px}.footer-grid p{font-size:14px;color:#95a7bc}.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:18px;font-size:11px;color:#8194aa}
+@media(max-width:1000px){.desktop-nav{display:none}.nav-cta{margin-left:auto}.menu-btn{display:block;border:0;background:none;font-size:23px;color:var(--navy)}.mobile-menu.open{display:flex}.mobile-menu{background:var(--paper);padding:20px 30px 28px;flex-direction:column;gap:15px;border-bottom:1px solid var(--line)}.hero-layout,.split-intro,.section-top,.partners-heading,.contact-top,.consulting-layout,.contact-layout{grid-template-columns:1fr;gap:45px}.hero-layout{padding-bottom:45px}.hero-card{max-width:640px}.section-top>p,.lead-copy,.partners-heading>p,.contact-top>p{padding-top:0}.consulting-intro{position:static}.service-grid{grid-template-columns:repeat(2,1fr)}.partner-card{grid-template-columns:38% 62%}.partner-card img{min-height:390px}.contact-quote{padding-bottom:20px}}
+@media(max-width:720px){.container{width:min(100% - 36px,1440px)}.site-header{height:70px}.nav{gap:15px}.nav-cta{display:none}.section{padding:80px 0}.hero{padding-top:72px;min-height:auto}.hero h1{font-size:62px}.hero-text{font-size:16px}.hero-card{margin:15px 0 30px}.hero-strip{grid-template-columns:1fr}.hero-strip div{border-right:0;border-bottom:1px solid rgba(255,255,255,.13);padding:16px 0}.practice-cards,.service-grid,.industry-grid,.partner-grid,.mncs,.associates>div{grid-template-columns:1fr}.service-grid{margin-top:42px}.industry-card{height:270px}.client-names{display:none}.mncs{gap:0;margin-top:40px}.client-logo{height:75px}.client-lower{grid-template-columns:1fr;gap:35px}.partner-card{grid-template-columns:1fr}.partner-card img{height:390px;min-height:0;object-position:center 15%}.contact-quote blockquote{font-size:43px}.footer-grid{grid-template-columns:1fr;gap:35px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-bottom:8px}}
+
+/* =========================
+   VERSION 4 — MONOCHROME CONTENT SYSTEM
+   All primary content sections use a white background and black typography.
+   Navy is reserved only for the hero/contact/footer anchor areas.
+   ========================= */
+:root{
+  --navy:#1f2d4f;
+  --navy-deep:#141d33;
+  --navy-soft:#2b3a61;
+  --ink:#171717;
+  --muted:#5f6368;
+  --paper:#ffffff;
+  --paper-deep:#ffffff;
+  --mist:#ffffff;
+  --line:#e3e3e3;
+  --teal:#171717;
+  --teal-dark:#171717;
+  --white:#ffffff;
+}
+
+body{background:#fff;color:var(--ink)}
+.site-header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.brand-mark{background:#171717;color:#fff}
+.brand strong,.brand small{color:#171717}
+.desktop-nav{color:#353535}
+.desktop-nav a:hover{color:#000}
+.nav-cta{background:#171717;color:#fff;border-radius:2px}
+.nav-cta:hover{background:#000}
+.menu-btn{color:#171717}
+.mobile-menu{background:#fff}
+
+/* Hero remains the single primary brand anchor; remove coloured accents. */
+.hero{background:var(--navy)}
+.hero:before{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px)}
+.hero:after{border-color:rgba(255,255,255,.10);box-shadow:0 0 0 95px rgba(255,255,255,.018),0 0 0 190px rgba(255,255,255,.012)}
+.pattern-rings{border-color:rgba(255,255,255,.09);box-shadow:0 0 0 62px rgba(255,255,255,.015)}
+.pattern-lines{border-color:rgba(255,255,255,.07);background:repeating-linear-gradient(135deg,transparent 0 31px,rgba(255,255,255,.045) 32px 33px)}
+.pattern-dots{background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.3px)}
+.eyebrow.light,.eyebrow.dark{color:#555}
+.hero .eyebrow.light{color:#d6dbe5}
+.hero-card{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.13)}
+.mini-label,.approach-item b{color:#d5d9e2}
+.hero-card-note{color:#f0f1f4}
+.btn-white{color:#171717;background:#fff}
+.btn-white:hover{background:#f2f2f2}
+.hero-link{color:#fff}
+
+/* Every main content section is deliberately plain white. */
+main > .section:not(.contact),
+.practice,.statutory,.consulting,.industries,.clients,.partners{background:#fff !important;color:#171717}
+.section:before{background-image:none !important}
+.section-pattern,.consulting:after{display:none !important}
+
+h2,h3{color:#171717}
+h2 em{color:inherit}
+p{color:inherit}
+.eyebrow.dark{color:#555}
+.section-top>p,.lead-copy,.partners-heading>p{color:#5f6368}
+
+/* Thin neutral line-work replaces coloured decorative styling. */
+.practice-cards,.service-grid,.consulting-list,.client-lower{border-color:#e2e2e2}
+.practice-cards article,.service-grid article{background:#fff;border-color:#e2e2e2}
+.practice-cards span,.service-grid span,.consulting-list b{color:#777}
+.practice-cards p,.service-grid p,.consulting-list p{color:#666}
+.text-link{color:#171717}
+.text-link:hover{text-decoration:underline}
+.btn-dark{background:#171717;color:#fff;border-radius:2px}
+.btn-dark:hover{background:#000}
+
+/* Consulting remains editorial and monochrome. */
+.consulting-list article{border-color:#e2e2e2}
+.consulting-list h3{color:#171717}
+
+/* Industry imagery is the intentional visual exception; labels remain neutral. */
+.industries .section-top{margin-bottom:0}
+.industry-grid{gap:14px}
+.industry-card{border-color:#ddd}
+.industry-card:before{background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.72))}
+.industry-card span{color:#f2f2f2}
+.industry-card h3{color:#fff}
+
+/* Clients: remove teal/blue panels and keep the section white and typographic. */
+.client-logo{background:#fff;color:#222;border-color:#e2e2e2}
+.client-logo:first-child{color:#222}
+.client-names{color:#444}
+.client-lower ul{color:#555}
+.client-lower aside{background:#fafafa;border:1px solid #e2e2e2}
+.note-icon{color:#171717}
+
+/* Partners: white cards, black text, neutral borders. */
+.partner-card{background:#fff;border-color:#dedede}
+.partner-card h3{color:#171717}
+.partner-role{color:#555}
+.credentials{color:#666}
+.partner-card>div>p:last-child{color:#555}
+.associates article{border-color:#ddd}
+.associates span{color:#666}
+
+/* Contact and footer share the same navy family without coloured gradients. */
+.contact{background:var(--navy)}
+.contact:before{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px)}
+.contact:after{border-color:rgba(255,255,255,.10);box-shadow:0 0 0 80px rgba(255,255,255,.014)}
+.contact .eyebrow.light{color:#d4d9e2}
+.contact-top>p{color:#d6d9df}
+.contact-card{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.12)}
+.whatsapp,.btn-teal{background:#fff;color:#171717}
+.contact-card small{color:#d6d9e2}
+.contact-card p{color:#e0e2e6}
+.contact-quote>span{background:#fff}
+footer{background:var(--navy-deep)}
+.footer-brand .brand-mark{background:#fff;color:#171717}
+.footer-grid h4{color:#fff}
+.footer-grid p{color:#aeb7c6}
+
+/* Neutral interaction system */
+a:focus-visible,.btn:focus-visible,.nav-cta:focus-visible{outline:2px solid #777;outline-offset:3px}
+
+/* V5 — COMPLETE MONOCHROME TREATMENT: HERO, CONTACT AND FOOTER */
+/* The full site now uses a white canvas, black typography and neutral grey linework. */
+.hero,
+.contact,
+footer{
+  background:#fff !important;
+  color:#171717 !important;
+}
+
+/* Neutral decorative system */
+.hero:before,
+.contact:before{
+  background-image:
+    linear-gradient(rgba(0,0,0,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.035) 1px,transparent 1px) !important;
+}
+.hero:after,
+.contact:after{
+  border-color:rgba(0,0,0,.08) !important;
+  box-shadow:0 0 0 95px rgba(0,0,0,.018),0 0 0 190px rgba(0,0,0,.012) !important;
+}
+.pattern-rings{
+  border-color:rgba(0,0,0,.08) !important;
+  box-shadow:0 0 0 62px rgba(0,0,0,.015) !important;
+}
+.pattern-lines{
+  border-color:rgba(0,0,0,.07) !important;
+  background:repeating-linear-gradient(135deg,transparent 0 31px,rgba(0,0,0,.04) 32px 33px) !important;
+}
+.pattern-dots{
+  background-image:radial-gradient(rgba(0,0,0,.13) 1px,transparent 1.3px) !important;
+}
+
+/* Hero typography and controls */
+.hero h1,
+.hero h1 em,
+.hero .eyebrow,
+.hero-text,
+.hero-link,
+.hero-strip strong,
+.hero-strip span,
+.mini-label,
+.approach-item,
+.approach-item b,
+.hero-card-note{
+  color:#171717 !important;
+}
+.hero-text{color:#5f6368 !important}
+.hero-card{
+  background:#fff !important;
+  border:1px solid #dedede !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+.approach-item{border-top-color:#e3e3e3 !important}
+.hero-strip{border-top-color:#dedede !important}
+.hero-strip div{border-right-color:#dedede !important}
+.hero-strip span{color:#666 !important}
+.btn-white{
+  background:#171717 !important;
+  color:#fff !important;
+  border:1px solid #171717 !important;
+}
+.btn-white:hover{background:#000 !important}
+.hero-link{border-bottom:1px solid #aaa}
+
+/* Contact becomes a plain white editorial section */
+.contact-top>p,
+.contact-card p,
+.contact-card small,
+.contact-quote blockquote{
+  color:#171717 !important;
+}
+.contact-top>p,.contact-card p{color:#5f6368 !important}
+.contact-card{
+  background:#fff !important;
+  border:1px solid #dedede !important;
+  box-shadow:none !important;
+}
+.contact-card>div:not(:first-child){border-top-color:#e3e3e3 !important}
+.contact-card small{color:#555 !important}
+.whatsapp,
+.btn-teal{
+  background:#171717 !important;
+  color:#fff !important;
+  border-radius:2px !important;
+}
+.contact-quote>span{background:#171717 !important}
+
+/* Footer is also white and monochrome */
+footer{
+  border-top:1px solid #dedede !important;
+}
+footer,
+.footer-grid,
+.footer-grid h4,
+.footer-grid a:not(.brand),
+.footer-grid p,
+.footer-bottom{
+  color:#171717 !important;
+}
+.footer-brand .brand-mark{
+  background:#171717 !important;
+  color:#fff !important;
+}
+.footer-grid h4{color:#555 !important}
+.footer-grid p{color:#666 !important}
+.footer-bottom{
+  border-top-color:#dedede !important;
+  color:#666 !important;
+}
+
+/* Mobile neutral borders */
+@media(max-width:720px){
+  .hero-strip div{border-bottom-color:#dedede !important}
+}
+
+
+/* V6 client logo restoration — original client-supplied logo assets from the approved profile deck. */
+.clients .mncs{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;align-items:center;margin:42px 0 24px}
+.clients .client-logo{height:118px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e2e2e2;padding:22px}
+.clients .client-logo img{display:block;max-width:100%;max-height:72px;width:auto;height:auto;object-fit:contain}
+@media(max-width:720px){.clients .mncs{grid-template-columns:repeat(2,1fr);gap:14px}.clients .client-logo{height:100px;padding:16px}.clients .client-logo img{max-height:56px}}
+
+/* =========================
+   V8 — TYPOGRAPHY & PARTNER PORTRAIT REFINEMENT
+   Content is intentionally unchanged. This pass only normalises visual hierarchy.
+   ========================= */
+
+/* One calm editorial type system across the full site. */
+body{font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4,p,.eyebrow,.mini-label,.partner-role,.credentials{font-style:normal}
+em{font-style:normal !important}
+strong,b{font-weight:600}
+
+/* Remove accidental visual emphasis from inline italic/bold treatment while preserving hierarchy. */
+h1 em,h2 em{font-weight:inherit;font-style:normal}
+.clients-lead,.lead-copy,.section-top>p,.partners-heading>p,.contact-top>p{font-weight:400}
+.hero-text,.practice-cards p,.service-grid p,.consulting-list p,.client-lower p,.partner-card>div>p:last-child,.contact-card p{font-weight:400}
+
+/* Headings use one consistent hierarchy rather than mixed emphatic styles. */
+h2{font-weight:600}
+h3{font-weight:600;line-height:1.28}
+.eyebrow,.mini-label{font-weight:600}
+.btn,.nav-cta,.hero-link,.text-link{font-weight:600}
+
+/* Partner cards: supplied portraits become the visual anchor; copy remains clean and even. */
+.partner-grid{gap:28px}
+.partner-card{grid-template-columns:38% 62%;background:#fff;border:1px solid #dedede}
+.partner-card img{filter:none;object-fit:cover;object-position:center top;background:#f4f4f4}
+.partner-card>div{padding:40px 38px}
+.partner-role{margin:0 0 14px;font-size:11px;letter-spacing:.12em;font-weight:600;color:#666}
+.partner-card h3{margin:0 0 12px;font-size:26px;font-weight:600;letter-spacing:-.02em}
+.credentials{margin:0 0 24px;font-size:13px;line-height:1.55;font-weight:500;color:#666}
+.partner-card>div>p:last-child{margin:0;font-size:15px;line-height:1.72;color:#555}
+
+/* Keep service and information blocks typographically consistent and readable. */
+.practice-cards h3,.service-grid h3,.consulting-list h3,.client-lower h3{font-weight:600}
+.consulting-list article{align-items:start}
+.consulting-list b{font-weight:500;letter-spacing:.04em}
+.client-lower aside strong{font-weight:600}
+
+@media(max-width:1000px){
+  .partner-card{grid-template-columns:38% 62%}
+  .partner-card>div{padding:34px 30px}
+}
+@media(max-width:720px){
+  .partner-card{grid-template-columns:1fr}
+  .partner-card img{height:390px;min-height:0;object-position:center top}
+  .partner-card>div{padding:30px 24px}
+}
+
+/* =========================================================
+   V9 — SKY BLUE BRAND SYSTEM
+   Single visual language built around #a9e3f7.
+   Content intentionally remains unchanged.
+   ========================================================= */
+:root{
+  --sky:#a9e3f7;
+  --sky-soft:#eef9fd;
+  --sky-pale:#f7fcfe;
+  --sky-line:#cfeef8;
+  --ink:#17242c;
+  --muted:#5f6d73;
+  --paper:#ffffff;
+  --line:#dfe8eb;
+  --black:#121a1e;
+}
+
+body{background:var(--paper);color:var(--ink)}
+.site-header{background:rgba(255,255,255,.94);border-bottom:1px solid var(--sky-line);backdrop-filter:blur(16px)}
+.brand-mark{background:var(--ink);color:#fff;border-radius:10px}
+.brand strong,.brand small{color:var(--ink)}
+.desktop-nav{color:var(--ink)}
+.desktop-nav a{opacity:.82}
+.desktop-nav a:hover{color:#000;opacity:1}
+.nav-cta{background:var(--ink);color:#fff;border-radius:4px}
+.nav-cta:hover{background:#000}
+.mobile-menu{background:#fff;border-top:1px solid var(--sky-line)}
+.menu-btn{color:var(--ink)}
+
+/* HERO — the primary expression of the sky-blue brand. */
+.hero{background:var(--sky) !important;color:var(--ink) !important;min-height:720px;padding:112px 0 0}
+.hero:before{background-image:linear-gradient(rgba(23,36,44,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(23,36,44,.055) 1px,transparent 1px) !important;background-size:76px 76px}
+.hero:after{width:600px;height:600px;right:-115px;top:-210px;border-color:rgba(23,36,44,.14) !important;box-shadow:0 0 0 95px rgba(255,255,255,.20),0 0 0 190px rgba(255,255,255,.10) !important}
+.pattern-rings{border-color:rgba(23,36,44,.13) !important;box-shadow:0 0 0 62px rgba(255,255,255,.16) !important}
+.pattern-lines{border-color:rgba(23,36,44,.10) !important;background:repeating-linear-gradient(135deg,transparent 0 34px,rgba(23,36,44,.055) 35px 36px) !important}
+.pattern-dots{background-image:radial-gradient(rgba(23,36,44,.17) 1px,transparent 1.3px) !important}
+.hero .eyebrow.light{color:#35515b !important}
+.eyebrow{font-size:12px;letter-spacing:.2em;font-weight:700}
+.hero h1,.hero h1 em{color:var(--ink) !important;font-weight:600}
+.hero-text{color:#42535a !important;max-width:640px}
+.hero-card{background:rgba(255,255,255,.72) !important;border:1px solid rgba(23,36,44,.14) !important;box-shadow:0 18px 50px rgba(30,68,80,.08) !important}
+.mini-label,.approach-item b{color:#3e626e !important}
+.approach-item{color:var(--ink) !important;border-top-color:rgba(23,36,44,.12) !important}
+.hero-card-note{color:#44555c !important}
+.btn-white{background:var(--ink) !important;color:#fff !important;border:1px solid var(--ink) !important;border-radius:4px}
+.btn-white:hover{background:#000 !important}
+.hero-link{color:var(--ink) !important;border-bottom:1px solid rgba(23,36,44,.35)}
+.hero-strip{border-top-color:rgba(23,36,44,.16) !important}
+.hero-strip div{border-right-color:rgba(23,36,44,.14) !important}
+.hero-strip strong{color:var(--ink) !important}
+.hero-strip span{color:#52636a !important}
+
+/* Shared section rhythm: white and very light sky washes, not unrelated colours. */
+main > .section{color:var(--ink) !important}
+.section{padding:112px 0}
+.practice,.industries,.partners{background:var(--sky-soft) !important}
+.statutory,.consulting,.clients{background:#fff !important}
+.section:before,.section-pattern,.consulting:after{display:none !important}
+h2,h3{color:var(--ink) !important}
+h2{font-weight:600;letter-spacing:-.035em}
+h2 em{color:inherit !important}
+.eyebrow.dark{color:#4f7480 !important}
+.section-top>p,.lead-copy,.partners-heading>p{color:var(--muted) !important}
+.text-link{color:var(--ink) !important}
+.text-link:hover{text-decoration:underline}
+
+/* OUR PRACTICE */
+.practice{border-top:1px solid var(--sky-line);border-bottom:1px solid var(--sky-line)}
+.practice-cards{border-color:#bfe6f2 !important;margin-top:56px}
+.practice-cards article{background:rgba(255,255,255,.78) !important;border-color:#bfe6f2 !important;min-height:220px}
+.practice-cards article:hover{background:#fff !important;box-shadow:0 14px 35px rgba(40,98,116,.08)}
+.practice-cards span{color:#4e8494 !important}
+.practice-cards p{color:var(--muted) !important}
+
+/* WHAT WE DO — structured as one restrained professional grid. */
+.statutory{border-bottom:1px solid var(--line)}
+.service-grid{border-color:var(--line) !important;margin-top:54px}
+.service-grid article{background:#fff !important;border-color:var(--line) !important;min-height:250px}
+.service-grid article:hover{background:var(--sky-pale) !important}
+.service-grid span{color:#52879a !important}
+.service-grid p{color:var(--muted) !important}
+
+/* CONSULTING — use blue as a quiet section anchor, with white information surface. */
+.consulting{background:var(--sky-soft) !important;border-top:1px solid var(--sky-line);border-bottom:1px solid var(--sky-line)}
+.consulting-layout{gap:78px}
+.consulting-intro{position:sticky;top:118px;align-self:start;padding:10px 0 28px}
+.consulting-intro>p{color:var(--muted) !important}
+.btn-dark{background:var(--ink) !important;color:#fff !important;border-radius:4px}
+.btn-dark:hover{background:#000 !important}
+.consulting-list{background:#fff;border:1px solid #cfeaf3;border-radius:4px;padding:0 28px}
+.consulting-list article{border-color:var(--line) !important;padding:28px 0}
+.consulting-list b{color:#518292 !important}
+.consulting-list h3{color:var(--ink) !important}
+.consulting-list p{color:var(--muted) !important}
+
+/* INDUSTRIES — photography is framed consistently rather than treated as decoration. */
+.industries{background:var(--sky-soft) !important}
+.industry-grid{gap:16px;margin-top:52px}
+.industry-card{border:1px solid #bfe5f0 !important;border-radius:4px;overflow:hidden;box-shadow:none}
+.industry-card:before{background:linear-gradient(180deg,rgba(18,34,41,.05),rgba(18,34,41,.78)) !important}
+.industry-card div{background:linear-gradient(90deg,rgba(169,227,247,.94),rgba(169,227,247,.76));color:var(--ink)}
+.industry-card span{color:#39525b !important}
+.industry-card h3{color:var(--ink) !important}
+
+/* CLIENTS — clean white gallery with the supplied logos as the visual focus. */
+.clients{background:#fff !important}
+.clients .mncs{gap:18px;margin-top:48px}
+.clients .client-logo{background:#fff !important;border:1px solid var(--line) !important;border-radius:4px;box-shadow:0 6px 18px rgba(22,48,58,.035)}
+.clients .client-logo:hover{border-color:#9bd8ec !important;box-shadow:0 12px 28px rgba(40,98,116,.08)}
+.client-names{color:#485b62 !important}
+.client-lower{border-color:var(--line) !important}
+.client-lower ul{color:var(--muted) !important}
+.client-lower aside{background:var(--sky-soft) !important;border:1px solid var(--sky-line) !important;border-radius:4px}
+.note-icon{color:#477f91 !important}
+
+/* PARTNERS — same pale-blue field as practice, white cards and disciplined hierarchy. */
+.partners{background:var(--sky-soft) !important;border-top:1px solid var(--sky-line)}
+.partner-grid{gap:24px}
+.partner-card{background:#fff !important;border:1px solid #bfe5f0 !important;border-radius:6px;overflow:hidden;box-shadow:0 12px 30px rgba(38,91,107,.05)}
+.partner-card img{background:#e7f6fb}
+.partner-card>div{padding:38px 36px}
+.partner-role{color:#4e8293 !important}
+.partner-card h3{color:var(--ink) !important}
+.credentials{color:#5d7178 !important;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:18px}
+.partner-card>div>p:last-child{color:var(--muted) !important}
+
+/* CONTACT — light sky continuation, not a separate visual theme. */
+.contact{background:var(--sky) !important;color:var(--ink) !important;border-top:1px solid #93d4eb}
+.contact:before{background-image:linear-gradient(rgba(23,36,44,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(23,36,44,.05) 1px,transparent 1px) !important}
+.contact:after{border-color:rgba(23,36,44,.11) !important;box-shadow:0 0 0 80px rgba(255,255,255,.16) !important}
+.contact .eyebrow.light{color:#3d6570 !important}
+.contact h2{color:var(--ink) !important}
+.contact-top>p{color:#4a5c63 !important}
+.contact-card{background:rgba(255,255,255,.82) !important;border:1px solid rgba(23,36,44,.14) !important;border-radius:6px;box-shadow:0 14px 36px rgba(34,82,97,.08)}
+.contact-card>div:not(:first-child){border-top-color:rgba(23,36,44,.10) !important}
+.contact-card small{color:#477888 !important}
+.contact-card p{color:#4e5f65 !important}
+.whatsapp,.btn-teal{background:var(--ink) !important;color:#fff !important;border-radius:4px}
+.contact-quote blockquote{color:var(--ink) !important}
+.contact-quote>span{background:#477f91 !important}
+
+/* FOOTER — compact, professional dark ink closes the page and relates to all typography. */
+footer{background:var(--ink) !important;color:#fff !important;border-top:0 !important}
+.footer-brand .brand-mark{background:var(--sky) !important;color:var(--ink) !important}
+footer .brand strong,footer .brand small{color:#fff !important}
+.footer-grid h4{color:var(--sky) !important}
+.footer-grid p,.footer-grid a:not(.brand){color:#d5e2e6 !important}
+.footer-grid a:hover{color:#fff !important}
+.footer-bottom{border-top-color:rgba(255,255,255,.14) !important;color:#aebfc5 !important}
+
+/* One consistent interaction and emphasis language. */
+a:focus-visible,.btn:focus-visible,.nav-cta:focus-visible{outline:2px solid #4e8293;outline-offset:3px}
+strong,b{font-weight:600}
+em{font-style:normal !important}
+
+@media(max-width:1000px){
+  .hero{min-height:auto;padding-top:96px}
+  .consulting-intro{position:static}
+  .consulting-list{padding:0 22px}
+}
+@media(max-width:720px){
+  .section{padding:76px 0}
+  .hero{padding-top:82px}
+  .consulting-list{padding:0 18px}
+  .partner-card>div{padding:30px 24px}
+}
+
+/* =========================================================
+   V10 — PROFESSIONAL BLUE SYSTEM
+   Brand colour: #2b81b2
+   Content is intentionally unchanged. This pass reviews the
+   colour hierarchy of every section and unifies the page.
+   ========================================================= */
+:root{
+  --brand:#2b81b2;
+  --brand-dark:#1e628a;
+  --brand-deep:#174a69;
+  --brand-soft:#eaf5fa;
+  --brand-pale:#f5fbfe;
+  --brand-line:#cfe5ef;
+  --ink:#17232b;
+  --muted:#5e6c74;
+  --paper:#ffffff;
+  --line:#dce7ec;
+}
+
+body{background:#fff;color:var(--ink)}
+.site-header{background:rgba(255,255,255,.95);border-bottom:1px solid var(--brand-line)}
+.brand-mark{background:var(--brand);color:#fff;border-radius:50%}
+.brand strong,.brand small{color:var(--ink)}
+.desktop-nav{color:#405059}.desktop-nav a:hover{color:var(--brand)}
+.nav-cta{background:var(--brand);color:#fff;border-radius:3px}.nav-cta:hover{background:var(--brand-dark)}
+.mobile-menu{border-top:1px solid var(--brand-line)}
+
+/* HERO: confident blue opening with one restrained decorative language. */
+.hero{background:var(--brand) !important;color:#fff !important;min-height:730px}
+.hero:before{background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px) !important;background-size:92px 92px}
+.hero:after{border-color:rgba(255,255,255,.18) !important;box-shadow:0 0 0 95px rgba(255,255,255,.045),0 0 0 190px rgba(255,255,255,.025) !important}
+.pattern-rings{border-color:rgba(255,255,255,.16) !important;box-shadow:0 0 0 62px rgba(255,255,255,.04) !important}
+.pattern-lines{border-color:rgba(255,255,255,.14) !important;background:repeating-linear-gradient(135deg,transparent 0 34px,rgba(255,255,255,.07) 35px 36px) !important}
+.pattern-dots{background-image:radial-gradient(rgba(255,255,255,.28) 1px,transparent 1.3px) !important}
+.hero .eyebrow.light{color:rgba(255,255,255,.78) !important}
+.hero h1,.hero h1 em{color:#fff !important}
+.hero-text{color:rgba(255,255,255,.86) !important}
+.hero-card{background:rgba(16,67,96,.20) !important;border:1px solid rgba(255,255,255,.24) !important;box-shadow:none !important}
+.mini-label,.approach-item b{color:rgba(255,255,255,.68) !important}.approach-item{color:#fff !important;border-top-color:rgba(255,255,255,.18) !important}.hero-card-note{color:rgba(255,255,255,.9) !important}
+.btn-white{background:#fff !important;color:var(--brand-dark) !important;border-color:#fff !important;border-radius:3px}.btn-white:hover{background:var(--brand-pale) !important}
+.hero-link{color:#fff !important;border-bottom-color:rgba(255,255,255,.45)}
+.hero-strip{border-top-color:rgba(255,255,255,.2) !important}.hero-strip div{border-right-color:rgba(255,255,255,.16) !important}.hero-strip strong{color:#fff !important}.hero-strip span{color:rgba(255,255,255,.72) !important}
+
+/* Shared section system: alternating white and restrained blue-tinted fields. */
+.section{padding:112px 0}.section:before,.section-pattern,.consulting:after{display:none !important}
+h2,h3{color:var(--ink) !important}.eyebrow.dark{color:var(--brand) !important}.section-top>p,.lead-copy,.partners-heading>p,.clients-lead{color:var(--muted) !important}
+.text-link{color:var(--brand-dark) !important}.text-link:hover{color:var(--brand) !important}
+
+/* OUR PRACTICE — white, open and editorial. */
+.practice{background:#fff !important;border-top:1px solid var(--brand-line)}
+.practice-cards{border-color:var(--brand-line) !important;margin-top:60px}.practice-cards article{background:#fff !important;border-color:var(--brand-line) !important;min-height:230px}.practice-cards article:hover{background:var(--brand-pale) !important}.practice-cards span{color:var(--brand) !important}.practice-cards p{color:var(--muted) !important}
+
+/* WHAT WE DO — soft blue field makes the service grid easier to scan. */
+.statutory{background:var(--brand-soft) !important;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.service-grid{border-color:#bcd9e6 !important}.service-grid article{background:rgba(255,255,255,.76) !important;border-color:#bcd9e6 !important}.service-grid article:hover{background:#fff !important}.service-grid span{color:var(--brand) !important}.service-grid p{color:var(--muted) !important}
+
+/* CONSULTING — white information surface with a clear blue action accent. */
+.consulting{background:#fff !important}.consulting-layout{gap:88px}.consulting-intro{border-left:3px solid var(--brand);padding:6px 0 8px 28px}.consulting-intro>p{color:var(--muted) !important}.btn-dark{background:var(--brand) !important;color:#fff !important;border-radius:3px}.btn-dark:hover{background:var(--brand-dark) !important}
+.consulting-list{background:var(--brand-pale) !important;border:1px solid var(--brand-line) !important;border-radius:0;padding:0 34px}.consulting-list article{border-color:var(--brand-line) !important}.consulting-list b{color:var(--brand) !important}.consulting-list h3{color:var(--ink) !important}.consulting-list p{color:var(--muted) !important}
+
+/* INDUSTRIES — a deeper blue-tinted field lets photography carry the visual weight. */
+.industries{background:#f1f8fb !important;border-top:1px solid var(--brand-line)}
+.industry-grid{gap:18px}.industry-card{border-color:#b9d8e5 !important;border-radius:2px}.industry-card:before{background:linear-gradient(180deg,rgba(11,52,75,.08),rgba(10,44,63,.78)) !important}.industry-card div{background:linear-gradient(90deg,rgba(43,129,178,.96),rgba(43,129,178,.76)) !important}.industry-card span{color:rgba(255,255,255,.8) !important}.industry-card h3{color:#fff !important}
+
+/* CLIENTS — clean white gallery keeps client-supplied logos authoritative. */
+.clients{background:#fff !important}.clients .client-logo{background:#fff !important;border-color:var(--brand-line) !important;border-radius:2px;box-shadow:none}.clients .client-logo:hover{border-color:#8fc5df !important;box-shadow:0 10px 26px rgba(43,129,178,.08)}.client-names{color:#52616a !important}.client-lower{border-color:var(--brand-line) !important}.client-lower ul{color:var(--muted) !important}.client-lower aside{background:var(--brand-pale) !important;border:1px solid var(--brand-line) !important;border-radius:2px}.note-icon{color:var(--brand) !important}
+
+/* PARTNERS — quiet pale-blue backdrop and white cards for the supplied portraits. */
+.partners{background:var(--brand-soft) !important;border-top:1px solid var(--brand-line)}
+.partner-card{background:#fff !important;border-color:#bfdbe7 !important;border-radius:3px;box-shadow:none}.partner-card img{background:#e8f4f9}.partner-role{color:var(--brand-dark) !important}.partner-card h3{color:var(--ink) !important}.credentials{color:#53636b !important;border-bottom-color:var(--brand-line) !important}.partner-card>div>p:last-child{color:var(--muted) !important}
+
+/* CONTACT — strong blue call-to-action that deliberately echoes the hero. */
+.contact{background:var(--brand) !important;color:#fff !important;border-top:0}.contact:before{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px) !important}.contact:after{border-color:rgba(255,255,255,.16) !important;box-shadow:0 0 0 80px rgba(255,255,255,.035) !important}.contact .eyebrow.light{color:rgba(255,255,255,.72) !important}.contact h2,.contact-quote blockquote{color:#fff !important}.contact-top>p{color:rgba(255,255,255,.82) !important}.contact-card{background:rgba(255,255,255,.1) !important;border-color:rgba(255,255,255,.24) !important;border-radius:3px;box-shadow:none}.contact-card>div:not(:first-child){border-top-color:rgba(255,255,255,.17) !important}.contact-card small{color:rgba(255,255,255,.66) !important}.contact-card p{color:#fff !important}.whatsapp,.btn-teal{background:#fff !important;color:var(--brand-dark) !important;border-radius:3px}.contact-quote>span{background:#fff !important}
+
+/* FOOTER — deep version of the same blue, not a competing navy. */
+footer{background:var(--brand-deep) !important;color:#fff !important}.footer-brand .brand-mark{background:#fff !important;color:var(--brand-dark) !important}footer .brand strong,footer .brand small{color:#fff !important}.footer-grid h4{color:#a9e3f7 !important}.footer-grid p,.footer-grid a:not(.brand){color:#cfe2eb !important}.footer-grid a:hover{color:#fff !important}.footer-bottom{border-top-color:rgba(255,255,255,.16) !important;color:#a9c7d5 !important}
+
+a:focus-visible,.btn:focus-visible,.nav-cta:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+@media(max-width:1000px){.consulting-intro{border-left:0;border-top:3px solid var(--brand);padding:28px 0 0}.consulting-list{padding:0 24px}}
+@media(max-width:720px){.section{padding:78px 0}.hero{padding-top:84px}.consulting-list{padding:0 18px}.hero-card{margin-top:12px}.partner-card{border-radius:2px}}
+
+/* =========================================================
+   V11 — DEEP BLUE SYSTEM
+   Brand colour: #03507c
+   Each section has a persistent colour treatment. Colour is
+   not dependent on hover, so the visual system also works on
+   touch devices. Content remains unchanged.
+   ========================================================= */
+:root{
+  --brand:#03507c;
+  --brand-dark:#023e61;
+  --brand-deep:#012d46;
+  --brand-soft:#e7f3f8;
+  --brand-pale:#f2f8fb;
+  --brand-mist:#d9ebf3;
+  --brand-line:#b8d6e4;
+  --ink:#14222b;
+  --muted:#586872;
+  --paper:#ffffff;
+  --line:#d7e2e8;
+}
+
+body{background:var(--paper);color:var(--ink)}
+.site-header{background:rgba(255,255,255,.97);border-bottom:2px solid var(--brand-line)}
+.brand-mark{background:var(--brand);color:#fff}.desktop-nav a:hover{color:var(--brand)}
+.nav-cta{background:var(--brand);color:#fff}.nav-cta:hover{background:var(--brand-dark)}
+.mobile-menu{background:#fff;border-top:1px solid var(--brand-line);border-bottom:2px solid var(--brand-line)}
+
+/* HERO — full brand field, with visible structure at every viewport. */
+.hero{background:var(--brand) !important;color:#fff !important;min-height:720px}
+.hero:before{background-image:linear-gradient(rgba(255,255,255,.085) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.085) 1px,transparent 1px) !important}
+.hero:after{border-color:rgba(255,255,255,.20) !important;box-shadow:0 0 0 95px rgba(255,255,255,.045),0 0 0 190px rgba(255,255,255,.025) !important}
+.pattern-rings{border-color:rgba(255,255,255,.18) !important;box-shadow:0 0 0 62px rgba(255,255,255,.04) !important}
+.pattern-lines{border-color:rgba(255,255,255,.15) !important;background:repeating-linear-gradient(135deg,transparent 0 34px,rgba(255,255,255,.075) 35px 36px) !important}
+.pattern-dots{background-image:radial-gradient(rgba(255,255,255,.30) 1px,transparent 1.3px) !important}
+.hero .eyebrow.light,.mini-label,.approach-item b{color:#b9dbe9 !important}
+.hero h1,.hero h1 em,.approach-item{color:#fff !important}.hero-text{color:#e4f0f5 !important}
+.hero-card{background:rgba(1,36,56,.24) !important;border:1px solid rgba(255,255,255,.24) !important;box-shadow:0 18px 50px rgba(0,26,41,.16) !important}
+.approach-item{border-top-color:rgba(255,255,255,.18) !important}.hero-card-note{color:#eef7fa !important}
+.btn-white{background:#fff !important;color:var(--brand-dark) !important;border-color:#fff !important}.btn-white:hover{background:#e8f3f8 !important}
+.hero-link{color:#fff !important;border-bottom-color:rgba(255,255,255,.48)}
+.hero-strip{border-top-color:rgba(255,255,255,.22) !important}.hero-strip div{border-right-color:rgba(255,255,255,.18) !important}.hero-strip strong{color:#fff !important}.hero-strip span{color:#c5e0eb !important}
+
+/* Every main section has its own persistent, visible colour field. */
+.section{padding:112px 0}.section:before,.section-pattern,.consulting:after{display:none !important}
+h2,h3{color:var(--ink) !important}.eyebrow.dark{color:var(--brand) !important}
+.section-top>p,.lead-copy,.partners-heading>p,.clients-lead{color:var(--muted) !important}
+.text-link{color:var(--brand-dark) !important}.text-link:hover{color:var(--brand) !important}
+
+/* OUR PRACTICE — pale blue field with white information surfaces. */
+.practice{background:var(--brand-pale) !important;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.practice-cards{border-color:var(--brand-line) !important}.practice-cards article{background:#fff !important;border-color:var(--brand-line) !important;box-shadow:0 5px 14px rgba(3,80,124,.025)}
+.practice-cards span{color:var(--brand) !important}.practice-cards p{color:var(--muted) !important}
+
+/* WHAT WE DO — light blue field so the service grid reads as a dedicated area. */
+.statutory{background:var(--brand-mist) !important;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.service-grid{border-color:#a9cedf !important}.service-grid article{background:rgba(255,255,255,.84) !important;border-color:#a9cedf !important;min-height:250px}
+.service-grid span{color:var(--brand) !important}.service-grid p{color:var(--muted) !important}
+
+/* CONSULTING — white-blue split: brand rail + tinted list surface, visible without hover. */
+.consulting{background:#fff !important;border-top:8px solid var(--brand) !important;border-bottom:1px solid var(--brand-line)}
+.consulting-intro{border-left:4px solid var(--brand);padding:8px 0 8px 28px}.consulting-intro>p{color:var(--muted) !important}
+.btn-dark{background:var(--brand) !important;color:#fff !important}.btn-dark:hover{background:var(--brand-dark) !important}
+.consulting-list{background:var(--brand-pale) !important;border:1px solid var(--brand-line) !important;border-radius:4px}
+.consulting-list article{border-color:var(--brand-line) !important}.consulting-list b{color:var(--brand) !important}.consulting-list h3{color:var(--ink) !important}.consulting-list p{color:var(--muted) !important}
+
+/* INDUSTRIES — soft blue field keeps the photography integrated into the brand system. */
+.industries{background:var(--brand-soft) !important;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.industry-card{border:3px solid rgba(3,80,124,.18) !important;border-radius:3px;box-shadow:0 10px 24px rgba(3,80,124,.07)}
+.industry-card:before{background:linear-gradient(180deg,rgba(1,45,70,.08),rgba(1,45,70,.84)) !important}
+.industry-card div{background:rgba(3,80,124,.90) !important;color:#fff !important}
+.industry-card span{color:#c7e6f1 !important}.industry-card h3{color:#fff !important}
+
+/* CLIENTS — white surface with a permanent blue band and blue-framed supplied logos. */
+.clients{background:#fff !important;border-top:1px solid var(--brand-line);border-bottom:8px solid var(--brand) !important}
+.clients .mncs{gap:18px}.clients .client-logo{background:var(--brand-pale) !important;border:2px solid var(--brand-line) !important;box-shadow:none !important}
+.client-names{color:#405661 !important}.client-lower{border-color:var(--brand-line) !important}.client-lower aside{background:var(--brand-soft) !important;border:1px solid var(--brand-line) !important}.note-icon{color:var(--brand) !important}
+
+/* PARTNERS — stronger blue field with crisp white cards; portrait treatment is always visible. */
+.partners{background:#d4e9f2 !important;border-top:1px solid #a8cedf;border-bottom:1px solid #a8cedf}
+.partner-card{background:#fff !important;border:2px solid #a9cedf !important;border-radius:5px;box-shadow:0 12px 28px rgba(3,80,124,.07) !important}
+.partner-card img{background:#eaf5f9}.partner-card>div{padding:40px 38px}.partner-role{color:var(--brand) !important}.partner-card h3{color:var(--ink) !important}.credentials{color:#4f6671 !important;border-bottom-color:var(--brand-line) !important}.partner-card>div>p:last-child{color:var(--muted) !important}
+
+/* CONTACT — persistent brand-blue CTA field, not a hover state. */
+.contact{background:var(--brand) !important;color:#fff !important;border-top:0 !important}
+.contact:before{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px) !important}
+.contact:after{border-color:rgba(255,255,255,.17) !important;box-shadow:0 0 0 80px rgba(255,255,255,.04) !important}
+.contact .eyebrow.light{color:#b9dbe9 !important}.contact h2{color:#fff !important}.contact-top>p{color:#d8eaf1 !important}
+.contact-card{background:rgba(255,255,255,.12) !important;border:1px solid rgba(255,255,255,.24) !important;box-shadow:none !important}.contact-card>div:not(:first-child){border-top-color:rgba(255,255,255,.16) !important}
+.contact-card small{color:#b9dbe9 !important}.contact-card p{color:#fff !important}.whatsapp,.btn-teal{background:#fff !important;color:var(--brand-dark) !important}.contact-quote blockquote{color:#fff !important}.contact-quote>span{background:#9ed0e3 !important}
+
+/* FOOTER — deep blue continuation of the same system. */
+footer{background:var(--brand-deep) !important;color:#fff !important;border-top:0 !important}
+.footer-brand .brand-mark{background:#fff !important;color:var(--brand-deep) !important}footer .brand strong,footer .brand small{color:#fff !important}.footer-grid h4{color:#a9d4e5 !important}.footer-grid p,.footer-grid a:not(.brand){color:#d4e5ec !important}.footer-grid a:hover{color:#fff !important}.footer-bottom{border-top-color:rgba(255,255,255,.16) !important;color:#9fc1cf !important}
+
+/* Touch and keyboard states are enhancements, never the only source of colour. */
+a:focus-visible,.btn:focus-visible,.nav-cta:focus-visible{outline:3px solid #7fc4df;outline-offset:3px}
+@media (hover:hover){.practice-cards article:hover,.service-grid article:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(3,80,124,.08)}}
+
+/* Mobile: preserve coloured section identity, simplify layout and make tap targets usable. */
+@media(max-width:1000px){
+  .desktop-nav{display:none}.menu-btn{display:block;color:var(--brand)}
+  .hero{min-height:auto;padding-top:92px}.hero-layout{gap:42px}
+  .consulting-intro{position:static;border-left:0;border-top:4px solid var(--brand);padding:26px 0 0}
+  .consulting-list{padding:0 24px}.contact-layout{gap:34px}
+}
+@media(max-width:720px){
+  .container{width:min(100% - 32px,1440px)}
+  .section{padding:72px 0}.hero{padding:72px 0 0}.hero h1{font-size:clamp(48px,15vw,66px);line-height:.98;letter-spacing:-.045em}
+  .hero-actions{flex-direction:column;align-items:flex-start;gap:18px}.btn,.nav-cta,.whatsapp,.btn-teal{min-height:48px;padding:13px 18px}
+  .hero-card{padding:24px}.hero-strip div{border-right:0 !important;border-bottom:1px solid rgba(255,255,255,.18) !important;margin-right:0;padding:18px 0}.hero-strip div:last-child{border-bottom:0 !important}
+  .practice-cards,.service-grid,.industry-grid,.partner-grid{grid-template-columns:1fr}.practice-cards article,.service-grid article{min-height:auto;padding:30px 24px}.practice-cards span,.service-grid span{margin-bottom:30px}
+  .consulting-list{padding:0 18px}.consulting-list article{grid-template-columns:38px 1fr;gap:14px}.industry-grid{gap:14px}.industry-card{height:260px}
+  .clients .mncs{grid-template-columns:repeat(2,1fr);gap:12px}.clients .client-logo{height:96px;padding:14px}.client-lower{grid-template-columns:1fr;gap:28px}.client-names{display:none}
+  .partner-card{grid-template-columns:1fr}.partner-card img{height:390px;min-height:0}.partner-card>div{padding:28px 22px}
+  .contact-card{padding:26px 22px}.contact-quote blockquote{font-size:clamp(34px,9vw,48px);line-height:1.12}
+}
+
+/* =========================================================
+   V13 — LAPTOP VIEWPORT FIT & RESPONSIVE SECTION COMPOSITION
+   The page should not rely on oversized fixed vertical spacing.
+   Content remains unchanged; only layout density and structure are refined.
+   ========================================================= */
+
+/* Keep section transitions visible on common laptop viewports without clipping content. */
+@media (min-width:1001px){
+  .site-header{height:72px}
+  .section{padding:clamp(56px,6vw,82px) 0}
+
+  .hero{
+    min-height:calc(100svh - 72px);
+    padding:clamp(54px,7vh,78px) 0 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .hero-layout{
+    min-height:auto;
+    gap:clamp(48px,6vw,82px);
+    padding-bottom:clamp(32px,5vh,52px);
+  }
+  .hero h1{font-size:clamp(58px,6.2vw,96px)}
+  .hero-text{margin:22px 0 26px;font-size:17px;line-height:1.58}
+  .hero-card{padding:26px}
+  .approach-item{padding:12px 0}
+  .hero-card-note{margin-top:18px;font-size:18px}
+  .hero-strip div{padding:18px 20px 20px 0;margin-right:20px}
+
+  .section-top,.split-intro,.partners-heading,.contact-top{gap:clamp(54px,6vw,88px)}
+  .section-top>p,.lead-copy,.partners-heading>p,.contact-top>p{padding-top:34px}
+  h2{font-size:clamp(42px,4.4vw,66px)}
+
+  .practice-cards{margin-top:42px}
+  .practice-cards article{padding:28px;min-height:205px}
+  .practice-cards span{margin-bottom:36px}
+
+  .service-grid{margin-top:42px}
+  .service-grid article{padding:26px 28px;min-height:185px}
+  .service-grid span{margin-bottom:28px}
+
+  /* Seven consulting services become a compact, readable two-column desktop composition. */
+  .consulting-layout{gap:64px;grid-template-columns:.68fr 1.32fr}
+  .consulting-intro{position:static}
+  .consulting-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:26px;
+    padding:0 26px;
+    align-content:start;
+  }
+  .consulting-list article{padding:22px 0;gap:14px}
+  .consulting-list h3{font-size:19px;margin-bottom:7px}
+  .consulting-list p{font-size:14px;line-height:1.5}
+
+  .industry-grid{margin-top:42px;gap:14px}
+  .industry-card{height:235px}
+  .industry-card>div{padding:22px}
+  .industry-card h3{font-size:24px}
+
+  .clients h2{margin-bottom:14px}
+  .clients .mncs{margin-top:34px;gap:14px}
+  .clients .client-logo{height:96px;padding:18px}
+  .client-names{padding:22px 0 42px;font-size:16px}
+  .client-lower{padding-top:34px;gap:52px}
+  .client-lower ul{margin:12px 0 0;line-height:1.62}
+  .client-lower aside{padding:24px 28px}
+
+  .partner-grid{margin-top:42px;gap:20px}
+  .partner-card{grid-template-columns:34% 66%}
+  .partner-card img{min-height:350px}
+  .partner-card>div{padding:30px}
+  .partner-card h3{font-size:23px;margin-bottom:9px}
+  .credentials{margin-bottom:16px;padding-bottom:12px}
+  .partner-card>div>p:last-child{line-height:1.58}
+
+  .contact{padding-bottom:68px}
+  .contact-layout{margin-top:42px;gap:72px}
+  .contact-card{padding:28px}
+  .contact-card>div:not(:first-child){padding:18px 0}
+  .contact-quote blockquote{font-size:clamp(38px,3.7vw,56px)}
+
+  footer{padding:42px 0 16px}
+  .footer-grid{gap:52px}
+  .footer-bottom{margin-top:28px;padding-top:14px}
+}
+
+/* Short-height laptops receive a denser but still comfortable layout. */
+@media (min-width:1001px) and (max-height:820px){
+  .section{padding:52px 0}
+  .hero{padding-top:42px}
+  .hero-layout{padding-bottom:28px}
+  .hero h1{font-size:clamp(54px,5.8vw,82px)}
+  .hero-card{padding:22px}
+  .hero-strip div{padding-top:14px;padding-bottom:16px}
+  .section-top>p,.lead-copy,.partners-heading>p,.contact-top>p{padding-top:24px}
+  .practice-cards,.service-grid,.industry-grid,.partner-grid{margin-top:32px}
+  .practice-cards article{min-height:180px;padding:24px}
+  .service-grid article{min-height:165px;padding:22px 24px}
+  .industry-card{height:205px}
+  .consulting-list article{padding:18px 0}
+  .consulting-list p{font-size:13.5px}
+  .partner-card img{min-height:320px}
+  .partner-card>div{padding:24px}
+  .clients .mncs{margin-top:28px}
+}
+
+/* Tablet widths: avoid forcing laptop-style density into a narrow screen. */
+@media (min-width:721px) and (max-width:1000px){
+  .section{padding:74px 0}
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+  .consulting-list{display:block;padding:0 24px}
+  .industry-grid{grid-template-columns:repeat(2,1fr)}
+  .clients .mncs{grid-template-columns:repeat(2,1fr)}
+}
+
+
+/* V14 PREMIUM SERVICE PRESENTATION — content preserved, structure upgraded */
+.services-showcase-head,.consulting-premium-head{position:relative;z-index:2}
+.section-kicker{display:block;margin-bottom:22px}
+
+.section-kicker .eyebrow{margin:0}
+.statute-placeholder{display:none}
+.statute h2,.consulting h2{margin:0}
+.services-title-row{display:grid;grid-template-columns:1.15fr .85fr;gap:120px;align-items:end;padding-bottom:42px;border-bottom:1px solid var(--brand-line)}
+.services-title-row>p{font-size:18px;line-height:1.7;color:var(--muted);max-width:510px;margin:0 0 5px}
+.statutory{background:linear-gradient(180deg,#f3f9fc 0%,#eaf5fa 100%) !important;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.statutory-showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.stat-service{position:relative;min-height:232px;padding:28px 30px 30px;background:rgba(255,255,255,.94);border:1px solid #b8d5e3;border-radius:2px;overflow:hidden;box-shadow:0 8px 22px rgba(3,80,124,.035)}
+.stat-service:before{content:'';position:absolute;left:0;top:0;right:0;height:4px;background:var(--brand)}
+.stat-service:nth-child(2):before,.stat-service:nth-child(5):before{background:#6fa7c2}.stat-service:nth-child(3):before,.stat-service:nth-child(6):before{background:#87b7cc}
+.stat-service-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:44px}
+.stat-service-top span{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--brand)}
+.stat-service-top i{width:38px;height:1px;background:#9fc5d6;display:block}
+.stat-service h3{font-size:23px;line-height:1.2;color:var(--ink);margin:0 0 14px;font-weight:650;letter-spacing:-.015em}
+.stat-service p{font-size:15px;line-height:1.65;color:var(--muted);margin:0;max-width:350px}
+/* Consulting: premium catalogue, all information visible without interaction */
+.consulting{background:#fff !important;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.consulting-premium-head{display:grid;grid-template-columns:1.05fr .95fr;gap:130px;align-items:end;padding-bottom:42px;border-bottom:1px solid var(--brand-line)}
+.consulting-premium-head>div:last-child{padding-bottom:4px}.consulting-premium-head>div:last-child>p{font-size:17px;line-height:1.7;color:var(--muted);margin:0;max-width:520px}.consulting-premium-head .btn{margin-top:26px}
+.consulting-premium-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px;align-items:stretch}
+.consult-card{position:relative;display:grid;grid-template-columns:76px 1fr;gap:24px;padding:30px 32px 32px;background:#fff;border:1px solid #b8d5e3;border-radius:2px;min-height:210px;overflow:hidden;box-shadow:0 8px 22px rgba(3,80,124,.035)}
+.consult-card:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--brand);opacity:.85}
+.consult-card:nth-child(2):after,.consult-card:nth-child(5):after{background:#73a8c2}.consult-card:nth-child(3):after,.consult-card:nth-child(6):after{background:#93bdcf}
+.consult-card-no{font-size:12px;line-height:1;font-weight:700;letter-spacing:.1em;color:var(--brand);padding-top:5px;border-right:1px solid #d4e6ee}
+.consult-card-body h3{font-size:22px;line-height:1.25;color:var(--ink);margin:0 0 14px;font-weight:650;letter-spacing:-.01em}.consult-card-body p{font-size:15px;line-height:1.65;color:var(--muted);margin:0}
+.consult-card-wide{grid-column:1/-1;min-height:150px;grid-template-columns:76px minmax(0,1fr)}
+.consult-card-wide .consult-card-body{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);gap:44px;align-items:start}.consult-card-wide .consult-card-body h3{margin:0}.consult-card-wide .consult-card-body p{max-width:720px}
+@media(max-width:1000px){.services-title-row,.consulting-premium-head{grid-template-columns:1fr;gap:26px}.services-title-row>p{max-width:680px}.statutory-showcase{grid-template-columns:repeat(2,1fr)}.consulting-premium-grid{grid-template-columns:1fr}.consult-card-wide{grid-column:auto}.consult-card-wide .consult-card-body{display:block}.consult-card-wide .consult-card-body h3{margin-bottom:14px}}
+@media(max-width:720px){.section-kicker{margin-bottom:16px}.services-title-row,.consulting-premium-head{padding-bottom:30px}.services-title-row>p,.consulting-premium-head>div:last-child>p{font-size:16px}.statutory-showcase,.consulting-premium-grid{grid-template-columns:1fr;gap:12px;margin-top:22px}.stat-service{min-height:auto;padding:24px}.stat-service-top{margin-bottom:28px}.stat-service h3{font-size:21px}.consult-card{grid-template-columns:44px 1fr;gap:16px;padding:24px}.consult-card-no{font-size:11px}.consult-card-body h3{font-size:20px}.consult-card-body p,.stat-service p{font-size:14.5px}}
+
+
+/* V17 targeted refinement — preserve content and desktop composition */
+.section-kicker, .eyebrow, .section-label {font-size:clamp(0.82rem,1vw,1rem)!important;letter-spacing:.16em!important;font-weight:800!important;color:#03507c!important;opacity:1!important;margin-bottom:14px!important}
+section h2{line-height:1.08}
+/* Consistent service surfaces */
+.statutory-grid > *, .services-grid > *, .consulting-grid > *, .consulting-services > * {border-color:rgba(3,80,124,.28)!important;box-shadow:none!important}
+.statutory-grid, .services-grid{align-items:stretch}
+.statutory-grid > *, .services-grid > *{border-left:4px solid #03507c!important;background:#fff!important}
+.consulting-grid > *, .consulting-services > *{border-left:3px solid #03507c!important;background:#fff!important}
+.statutory-grid p,.services-grid p,.consulting-grid p,.consulting-services p{line-height:1.65!important}
+/* Better scan hierarchy without touching wording */
+.statutory-grid h3,.services-grid h3,.consulting-grid h3,.consulting-services h3{margin-bottom:.65rem!important;color:#03507c!important}
+/* Industry photo visibility */
+.industry-card{overflow:hidden}
+.industry-card img{width:100%;height:100%;object-fit:cover;object-position:center}
+.industry-card .industry-content,.industry-card .industry-overlay,.industry-card .industry-band{background:rgba(3,80,124,.52)!important;backdrop-filter:blur(2px)!important}
+.industry-card h3,.industry-card .number{color:#fff!important;text-shadow:0 1px 2px rgba(0,0,0,.28)}
+/* Mobile navigation: fixed drawer, clear placement */
+@media(max-width:900px){
+  .nav-links{position:fixed!important;top:0!important;right:0!important;left:auto!important;width:min(86vw,360px)!important;height:100dvh!important;background:#fff!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;padding:92px 28px 28px!important;gap:0!important;transform:translateX(105%)!important;transition:transform .25s ease!important;box-shadow:-12px 0 32px rgba(0,0,0,.14)!important;z-index:10001!important;overflow-y:auto!important;visibility:visible!important}
+  .nav-links.active,.nav-links.open{transform:translateX(0)!important}
+  .nav-links a{display:block!important;padding:15px 0!important;border-bottom:1px solid rgba(3,80,124,.14)!important;color:#111!important;font-size:1rem!important}
+  .nav-toggle,.menu-toggle,.hamburger{position:relative!important;z-index:10002!important}
+  body.menu-open{overflow:hidden!important}
+  section{min-height:auto!important;padding-top:56px!important;padding-bottom:56px!important}
+  .statutory-grid,.services-grid,.consulting-grid,.consulting-services{grid-template-columns:1fr!important}
+  .industry-grid{grid-template-columns:1fr!important}
+  .industry-card{min-height:260px!important}
+  .industry-card img{min-height:260px!important}
+  .partners-grid,.partner-grid{grid-template-columns:1fr!important}
+  .clients-grid,.logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+/* V21 — Statutory Services refinement: existing structure retained, borders standardised */
+.statutory-showcase{
+  gap:16px;
+}
+.stat-service{
+  min-height:232px;
+  padding:30px 30px 32px;
+  background:#fff;
+  border:1px solid rgba(3,80,124,.22);
+  border-radius:0;
+  box-shadow:none;
+}
+/* Keep every service card visually equal — no alternating accent colours */
+.stat-service:before,
+.stat-service:nth-child(2):before,
+.stat-service:nth-child(3):before,
+.stat-service:nth-child(4):before,
+.stat-service:nth-child(5):before,
+.stat-service:nth-child(6):before{
+  height:3px;
+  background:#03507c;
+}
+.stat-service-top{
+  margin-bottom:34px;
+  padding-bottom:13px;
+  border-bottom:1px solid rgba(3,80,124,.12);
+}
+.stat-service-top span{
+  color:#03507c;
+  font-weight:750;
+}
+.stat-service-top i{
+  width:28px;
+  background:rgba(3,80,124,.35);
+}
+.stat-service h3{
+  color:#171717;
+  margin-bottom:12px;
+}
+.stat-service p{
+  line-height:1.68;
+}
+@media(max-width:720px){
+  .stat-service{padding:24px 22px 26px}
+  .stat-service-top{margin-bottom:24px;padding-bottom:11px}
+}
+
+/* V22 — Consulting Services refinement: existing structure retained, borders and hierarchy standardised */
+.consulting-premium-grid{
+  gap:16px;
+}
+.consult-card{
+  border:1px solid rgba(3,80,124,.22);
+  border-radius:0;
+  box-shadow:none;
+}
+/* One consistent visual treatment across every consulting service */
+.consult-card:after,
+.consult-card:nth-child(2):after,
+.consult-card:nth-child(3):after,
+.consult-card:nth-child(4):after,
+.consult-card:nth-child(5):after,
+.consult-card:nth-child(6):after,
+.consult-card:nth-child(7):after{
+  height:3px;
+  background:#03507c;
+  opacity:1;
+}
+.consult-card-no{
+  color:#03507c;
+  border-right-color:rgba(3,80,124,.16);
+  font-weight:750;
+}
+.consult-card-body h3{
+  color:#171717;
+  margin-bottom:12px;
+}
+.consult-card-body p{
+  line-height:1.68;
+}
+.consult-card-wide{
+  border-color:rgba(3,80,124,.22);
+}
+@media(max-width:720px){
+  .consult-card{
+    padding:24px 22px 26px;
+  }
+  .consult-card-no{
+    border-right-color:rgba(3,80,124,.14);
+  }
+}
+
+/* V23 — Statutory Services border treatment aligned with Consulting Services */
+/* Retain the existing statutory card structure; match the exact outer-edge language used by consulting cards. */
+.stat-service{
+  border:1px solid rgba(3,80,124,.22);
+  border-radius:0;
+  box-shadow:none;
+}
+/* Use the same consistent 3px brand edge treatment as Consulting Services. */
+.stat-service:before,
+.stat-service:nth-child(2):before,
+.stat-service:nth-child(3):before,
+.stat-service:nth-child(4):before,
+.stat-service:nth-child(5):before,
+.stat-service:nth-child(6):before{
+  top:auto;
+  bottom:0;
+  height:3px;
+  background:#03507c;
+}
+/* Keep the statutory numbering/content structure intact; only the card border system is aligned. */
+.stat-service-top{
+  border-bottom:0;
+  padding-bottom:0;
+}
+
+/* V24 — Industry image visibility refinement only */
+/* Keep the existing cards and content intact; reveal more of each photograph. */
+.industry-card:before{
+  background:linear-gradient(180deg,rgba(1,45,70,.02) 0%,rgba(1,45,70,.18) 58%,rgba(1,45,70,.34) 100%) !important;
+}
+.industry-card div,
+.industry-card .industry-content,
+.industry-card .industry-overlay,
+.industry-card .industry-band{
+  background:rgba(3,80,124,.42) !important;
+  backdrop-filter:none !important;
+}
+.industry-card img{
+  object-position:center center !important;
+}
+/* Background-image cards: preserve more of the image within the existing card frame. */
+.industry-card{
+  background-position:center center !important;
+}
+.industry-card span,
+.industry-card .number{
+  color:rgba(255,255,255,.92) !important;
+}
+.industry-card h3{
+  text-shadow:0 1px 2px rgba(0,0,0,.34) !important;
+}
+@media(max-width:720px){
+  .industry-card:before{
+    background:linear-gradient(180deg,rgba(1,45,70,.01) 0%,rgba(1,45,70,.12) 62%,rgba(1,45,70,.30) 100%) !important;
+  }
+  .industry-card div,
+  .industry-card .industry-content,
+  .industry-card .industry-overlay,
+  .industry-card .industry-band{
+    background:rgba(3,80,124,.38) !important;
+  }
+}
+
+/* V25: targeted mobile navigation and responsive fixes only */
+@media (max-width: 900px) {
+  html, body { overflow-x: hidden; }
+  .nav-links { display:none; }
+  .menu-toggle, .mobile-menu-toggle { display:inline-flex; position:relative; z-index:1002; align-items:center; justify-content:center; min-width:44px; min-height:44px; }
+  .mobile-nav, .mobile-menu {
+    position:fixed; top:0; right:0; bottom:0; left:auto;
+    width:min(86vw, 380px); max-width:100%; height:100dvh;
+    transform:translateX(105%); transition:transform .28s ease;
+    overflow-y:auto; -webkit-overflow-scrolling:touch;
+    z-index:1001; padding:84px 24px 32px;
+    box-sizing:border-box;
+  }
+  .mobile-nav.open, .mobile-nav.active, .mobile-menu.open, .mobile-menu.active { transform:translateX(0); }
+  .mobile-nav a, .mobile-menu a { display:block; padding:14px 0; min-height:44px; box-sizing:border-box; }
+  body.menu-open { overflow:hidden; }
+  section, .section { min-height:auto !important; height:auto !important; overflow:visible; }
+  .container, .section-inner { width:min(100% - 32px, 1200px); }
+  .grid, .services-grid, .statutory-grid, .consulting-grid, .industries-grid, .partners-grid { grid-template-columns:1fr !important; }
+  img { max-width:100%; height:auto; }
+  .hero, .hero-content { min-height:auto !important; }
+  .hero-content { padding-top:96px; padding-bottom:56px; }
+}
+@media (max-width: 600px) {
+  .mobile-nav, .mobile-menu { width:88vw; padding-left:20px; padding-right:20px; }
+  .section, section { padding-top:52px; padding-bottom:52px; }
+  .card, .service-card, .consulting-card, .partner-card { min-width:0; }
+}
+
+/* V26 — mobile navigation: header remains at top; hamburger anchored at top-right */
+@media (max-width: 1000px){
+  .site-header{position:sticky !important;top:0;left:0;right:0;width:100%;z-index:2000;}
+  .nav{position:relative;width:100%;min-height:70px;}
+  .menu-btn{display:inline-flex !important;position:absolute !important;right:0;top:50%;transform:translateY(-50%);z-index:2002;align-items:center;justify-content:center;width:44px;height:44px;margin:0;padding:0;line-height:1;}
+  .mobile-menu{position:fixed !important;top:70px !important;right:0 !important;left:auto !important;bottom:0 !important;width:min(86vw,380px) !important;height:calc(100dvh - 70px) !important;z-index:2001 !important;}
+}
+@media (max-width: 720px){
+  .site-header{height:70px;}
+  .nav{min-height:70px;}
+  .menu-btn{right:0;}
+  .mobile-menu{top:70px !important;height:calc(100dvh - 70px) !important;width:min(88vw,380px) !important;}
+}
+
+/* V28 — mobile navbar reliably fixed to viewport top (targeted change only) */
+@media (max-width: 1000px){
+  .site-header{
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+    z-index:9999 !important;
+  }
+  body{padding-top:78px;}
+  .nav{position:relative !important; min-height:78px; width:100%;}
+  .menu-btn{
+    position:absolute !important;
+    top:50% !important;
+    right:0 !important;
+    left:auto !important;
+    transform:translateY(-50%) !important;
+    z-index:10001 !important;
+  }
+  .mobile-menu{
+    position:fixed !important;
+    top:78px !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:auto !important;
+    height:calc(100dvh - 78px) !important;
+    z-index:10000 !important;
+  }
+}
+@media (max-width:720px){
+  .site-header{height:70px !important;}
+  body{padding-top:70px;}
+  .nav{min-height:70px;}
+  .mobile-menu{top:70px !important;height:calc(100dvh - 70px) !important;}
+}
+
+/* V29 — focused mobile navigation correction */
+@media (max-width: 1000px){
+  .site-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;height:70px!important;z-index:12000!important;}
+  body{padding-top:70px!important;}
+  .nav{height:70px!important;min-height:70px!important;display:flex!important;align-items:center!important;position:relative!important;}
+  .desktop-nav,.nav-cta{display:none!important;}
+  .menu-btn{display:flex!important;position:absolute!important;right:16px!important;left:auto!important;top:50%!important;transform:translateY(-50%)!important;width:44px!important;height:44px!important;align-items:center!important;justify-content:center!important;z-index:12002!important;margin:0!important;}
+  .mobile-menu{position:fixed!important;top:70px!important;right:0!important;bottom:0!important;left:auto!important;width:min(86vw,380px)!important;height:calc(100dvh - 70px)!important;box-sizing:border-box!important;padding:18px 24px 28px!important;margin:0!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;z-index:12001!important;}
+  .mobile-menu a{display:block!important;padding:14px 0!important;margin:0!important;min-height:48px!important;box-sizing:border-box!important;}
+  .mobile-menu a[href="#contact"]{margin-top:16px!important;padding:13px 16px!important;min-height:48px!important;text-align:center!important;background:#03507c!important;color:#fff!important;border:1px solid #03507c!important;border-radius:3px!important;font-weight:600!important;}
+}
+@media (max-width:720px){
+  .mobile-menu{width:min(90vw,380px)!important;padding:16px 20px 24px!important;}
+  .menu-btn{right:12px!important;}
+}
+
+/* V30: reuse existing Contact Us details in footer */
+.footer-contact{min-width:0}
+.footer-contact .footer-address{margin:0 0 14px;line-height:1.55}
+.footer-contact a{overflow-wrap:anywhere}
+@media(min-width:721px){.footer-grid{grid-template-columns:1.7fr 1fr 1.35fr}}
+
+/* V31 — Footer contact hierarchy and spacing refinement */
+.footer-contact h4{margin-bottom:22px!important}
+.footer-contact-group{display:flex;flex-direction:column}
+.footer-office{padding-bottom:20px;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer-office strong{display:block;font-size:15px;line-height:1.35;font-weight:700;letter-spacing:.01em;color:#fff;margin-bottom:8px}
+.footer-contact .footer-address{margin:0!important;line-height:1.65}
+.footer-phones{gap:7px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer-emails{gap:9px}
+.footer-contact a{margin:0!important;line-height:1.45;overflow-wrap:anywhere}
+@media(max-width:720px){.footer-contact h4{margin-bottom:18px!important}.footer-office{padding-bottom:18px;margin-bottom:16px}.footer-phones{padding-bottom:16px;margin-bottom:16px}.footer-emails{gap:10px}}
+
+/* v32: two partner-specific WhatsApp actions */
+.whatsapp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}.whatsapp-actions .whatsapp{margin-bottom:0;flex:1 1 180px;justify-content:center;white-space:nowrap}.whatsapp-actions + div{border-top:1px solid rgba(255,255,255,.17) !important}@media(max-width:600px){.whatsapp-actions{flex-direction:column;gap:10px}.whatsapp-actions .whatsapp{width:100%;justify-content:space-between}.whatsapp-actions + div{margin-top:0}}
+
+/* V36 — unified IC & Associates wordmark */
+.brand{gap:0;text-decoration:none}.brand-mark{display:none!important}.brand-wordmark{display:inline-flex;align-items:center;gap:0;white-space:nowrap;font-family:Arial,Helvetica,sans-serif;line-height:1}.brand .logo-ic,.brand .logo-associates{font-size:20px;font-weight:700;letter-spacing:-.04em;color:var(--ink)}.brand .logo-amp{display:inline-flex;align-items:center;justify-content:center;margin:0 5px;padding:2px 5px;border-radius:2px;background:#9a7358;color:#fff;font-size:14px;font-weight:700;line-height:1}.brand .logo-associates{font-weight:500}.footer-brand .logo-ic,.footer-brand .logo-associates{color:#fff!important}.footer-brand .logo-amp{background:#9a7358;color:#fff}@media(max-width:720px){.brand .logo-ic,.brand .logo-associates{font-size:18px}.brand .logo-amp{font-size:13px;margin:0 4px;padding:2px 4px}}
+
+/* V38 — targeted mobile logo alignment: add a small inset without changing desktop navigation */
+@media (max-width:720px){
+  .site-header .nav .brand{
+    margin-left:8px !important;
+  }
+}
+
+
+/* V41 — compact WhatsApp actions in partner cards */
+.partner-whatsapp{display:inline-flex;align-items:center;gap:7px;margin-top:20px;padding:7px 11px;border:1px solid #b9dce7;border-radius:999px;color:var(--brand-dark,#03507c);background:#fff;font-size:12px;font-weight:600;line-height:1;text-decoration:none;transition:transform .2s ease,background .2s ease}
+.partner-whatsapp svg{width:16px;height:16px;fill:currentColor;flex:0 0 16px}
+.partner-whatsapp:hover,.partner-whatsapp:focus-visible{background:var(--brand-soft,#eef8fb);transform:translateY(-1px)}
+@media(max-width:720px){.partner-whatsapp{margin-top:18px;padding:8px 12px}}
+
+
+/* V45 — client logo quality pass. Based directly on V42; only the client logo assets and their display scale are changed. */
+.clients .mncs.client-logo-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:48px;margin-bottom:26px}
+.clients .client-logo{height:150px;padding:20px;background:#fff;border:1px solid #e2e2e2;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.clients .client-logo img{display:block;max-width:88%;max-height:100px;width:auto;height:auto;object-fit:contain;image-rendering:auto}
+@media(max-width:720px){.clients .mncs.client-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:36px}.clients .client-logo{height:118px;padding:14px}.clients .client-logo img{max-width:88%;max-height:76px}}
+
+/* V46 — client logos supplied by the user: display originals without stretching */
+.clients .client-logo img{max-width:84%;max-height:84px;width:auto;height:auto;object-fit:contain}
+.clients .client-logo:nth-child(2) img{max-height:82px}
+.clients .client-logo:nth-child(3) img{max-height:76px}
+.clients .client-logo:nth-child(4) img{max-height:76px}
+@media(max-width:720px){.clients .client-logo img{max-width:84%;max-height:62px}.clients .client-logo:nth-child(2) img{max-height:66px}}
