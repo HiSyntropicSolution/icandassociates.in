@@ -40,4 +40,43 @@ const menuButton=document.querySelector('.menu-btn');const mobileMenu=document.q
     btn.setAttribute('aria-label',open?'Open menu':'Close menu');
   });
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>btn.setAttribute('aria-expanded','false')));
+
+
 })();
+
+
+// Scroll-spy navigation
+const navLinks = document.querySelectorAll('.desktop-nav a[href^="#"]');
+const sections = document.querySelectorAll(
+    '#home, #practice, #statutory, #consulting, #industries, #clients, #partners, #contact'
+);
+
+const setActiveNav = (id) => {
+    navLinks.forEach(link => {
+        link.classList.toggle(
+            'active',
+            link.getAttribute('href') === `#${id}`
+        );
+    });
+};
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        const visibleSections = entries
+            .filter(entry => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleSections.length) {
+            setActiveNav(visibleSections[0].target.id);
+        }
+    },
+    {
+        root: null,
+        rootMargin: '-90px 0px -55% 0px',
+        threshold: [0.1, 0.25, 0.5, 0.75]
+    }
+);
+
+sections.forEach(section => observer.observe(section));
+
+
