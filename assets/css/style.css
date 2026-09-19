@@ -5300,7 +5300,8 @@ section h2 {
   color: #fff;
   font-size: 60px;
   font-weight: 700;
-  line-height: 1
+  line-height: 1;
+  background: #ac3711;
 }
 
 .brand .logo-associates {
