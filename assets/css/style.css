@@ -5477,3 +5477,199 @@ section h2 {
 .hero .hero-copy-block h1 {
     font-size: 52px !important;
 }
+
+
+
+/* Introduce radius effect */
+
+
+/* Subtle corner refinement — IC & Associates */
+
+/* Primary buttons */
+.nav-cta,
+.btn {
+  border-radius: 7px;
+}
+
+/* Main content cards */
+.hero-card,
+.practice-cards article,
+.stat-service,
+.consult-card,
+.partner-card,
+.contact-card,
+.client-logo,
+.client-lower aside {
+  border-radius: 9px;
+}
+
+/* Image-based industry cards */
+.industry-card {
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+/* Contact and enquiry buttons */
+.whatsapp,
+.btn-teal,
+.partner-whatsapp {
+  border-radius: 7px;
+}
+
+/* Keep the logo's existing styling intact */
+.brand .logo-amp {
+  border-radius: 2px;
+}
+
+
+
+/* Practice cards: keep the connected grid visually clean */
+.practice-cards {
+  gap: 0;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.practice-cards article {
+  border-radius: 0;
+}
+
+/* Round only the outside corners of the complete grid */
+.practice-cards article:first-child {
+  border-radius: 9px 0 0 9px;
+}
+
+.practice-cards article:last-child {
+  border-radius: 0 9px 9px 0;
+}
+
+/* On mobile, cards stack vertically */
+@media (max-width: 720px) {
+  .practice-cards {
+    border-radius: 9px;
+  }
+
+  .practice-cards article:first-child {
+    border-radius: 9px 9px 0 0;
+  }
+
+  .practice-cards article:last-child {
+    border-radius: 0 0 9px 9px;
+  }
+}
+
+
+/* Photos of partner fixed */
+
+/* Partner photographs: show the complete original image */
+
+.partner-card {
+  grid-template-columns: 45% 55%;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.partner-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center center;
+  background: #f4f4f4;
+}
+
+/* Tablet */
+@media (min-width: 721px) and (max-width: 1000px) {
+  .partner-card {
+    grid-template-columns: 42% 58%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .partner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+}
+
+
+
+/* =========================================================
+   FINAL PARTNER PORTRAIT FIX
+   Wider, consistent image panels; avoid contain-induced letterboxing.
+   ========================================================= */
+.partner-grid {
+  align-items: stretch;
+}
+
+.partner-card {
+  grid-template-columns: 44% 56%;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.partner-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  align-self: stretch;
+  object-fit: cover;
+  object-position: center 18%;
+  background: #fff;
+}
+
+@media (min-width: 721px) and (max-width: 1000px) {
+  .partner-card {
+    grid-template-columns: 42% 58%;
+  }
+
+  .partner-card > img {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 720px) {
+  .partner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card > img {
+    width: 100%;
+    height: 340px;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+}
+
+
+
+/* Improve readability of the hero card closing statement */
+.hero-card-note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: #f4f8fc !important;
+  margin-top: 24px;
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  .hero-card-note {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
